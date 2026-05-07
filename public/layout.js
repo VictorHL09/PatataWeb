@@ -9,17 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Inserting sidebars:
     const wrapperElement = document.querySelector(".container"); // you might have to change this selector to something like .my-wrapper
     if (wrapperElement) {
-        wrapperElement.insertAdjacentHTML("afterbegin", sidebarEl1);
-        wrapperElement.insertAdjacentHTML("beforeend", sidebarEl2);
-
-
-        const el = document.getElementById('digits');
-        if (el) {
-            const img = document.createElement('img');
-            img.src = 'https://hits.sh/patataweb.neocities.org.svg?style=flat-square&label=Visitas%3A&color=f1b50e&labelColor=ffe47d';
-            img.alt = 'visitas';
-            el.replaceWith(img);
-        }
+      wrapperElement.insertAdjacentHTML("afterbegin", sidebarEl1);
+      wrapperElement.insertAdjacentHTML("beforeend", sidebarEl2);
 
     }
 
@@ -151,13 +142,13 @@ const sidebarEl1 = `
 const sidebarEl2 = `
 	<aside class="barraderecha">
 
-        <fieldset class="asideembed" style="display: flex; justify-content: center;">
+        <fieldset class="asideembed" style="display: flex; justify-content: center; height: 300px">
 
-            <legend>Contador
+            <legend>PatataChat
             <img src="img/earth.gif">
             </legend>
 
-            <div id="digits"></div>
+            <iframe src="https://www5.cbox.ws/box/?boxid=962863&boxtag=rFbCUC" width="100%" height="100%" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
 
         </fieldset>
 
