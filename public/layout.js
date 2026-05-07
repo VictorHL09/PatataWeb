@@ -148,7 +148,7 @@ const sidebarEl2 = `
             <img src="img/earth.gif">
             </legend>
 
-            <iframe src="https://www5.cbox.ws/box/?boxid=962863&boxtag=rFbCUC" width="100%" height="100%" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+            <iframe class="chat" src="https://www5.cbox.ws/box/?boxid=962863&boxtag=rFbCUC" width="100%" height="100%" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
 
         </fieldset>
 
