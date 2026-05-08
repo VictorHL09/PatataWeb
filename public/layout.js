@@ -95,7 +95,7 @@ const sidebarEl2 = `
 
             <legend>
                 PatataChat
-                <img src="img/earth.gif">
+                <img src="img/chat.gif">
             </legend>
 
           <iframe src="https://www5.cbox.ws/box/?boxid=962863&amp;boxtag=rFbCUC" width="100%" height="250px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
@@ -107,7 +107,8 @@ const sidebarEl2 = `
         <fieldset class="asideembed">
 
           <legend>
-          Actividad
+            Actividad
+            <img src="img/hi.gif">
           </legend>
 
           <ul class="actividad">

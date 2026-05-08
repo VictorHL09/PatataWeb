@@ -69,7 +69,7 @@ header{
 aside{
     background-color: var(--bg-box-hard);
 
-        padding: 10px;
+    padding: 20px 10px;
 }
 
 .barraizquierda{
@@ -121,13 +121,14 @@ aside{
 
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
 }
 
 .asideembed{
     border: 2px dashed var(--border-hard);
     padding: 10px;
-    background-color: var(--bg-box);
+
+    position: relative;
 }
 
 .asideembed > legend{
@@ -136,11 +137,17 @@ aside{
     font-weight: bold;
     color: var(--title-color);
     text-shadow: 1px 1px var(--title-shadow);
+    background-color: var(--bg-box-hard);
     text-align: right;
+
+    position: absolute;
+    top: -20px;
+    right: 3px;
 }
 
 .asideembed > legend > img{
     width: 20px;
+    height: auto;
 }
 
 .actividad{
@@ -152,7 +159,7 @@ aside{
 }
 
 main{
-    padding: 10px;
+    padding: 20px 10px;
     grid-area: main;
 
     display: flex;
