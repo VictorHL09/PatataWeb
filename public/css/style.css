@@ -22,10 +22,14 @@
     font-family: 'Comic Sans MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
   background-color: var(--bg-main);
+    background-image: url(../img/square.gif);
+    background-repeat: repeat;
+    background-attachment: scroll;
 }
 
 body, a{
@@ -114,6 +118,10 @@ aside{
     grid-area: right;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .asideembed{
@@ -133,6 +141,14 @@ aside{
 
 .asideembed > legend > img{
     width: 20px;
+}
+
+.actividad{
+    list-style-type: none;
+}
+
+.actividad > li{
+    font-size: 12px;
 }
 
 main{
@@ -156,6 +172,8 @@ main > div > p{
 
 footer{
     text-align: center;
+    font-weight: bold;
+    background-color: var(--bg-box);
 }
 
 /* ESTILO DE TEXTOS */

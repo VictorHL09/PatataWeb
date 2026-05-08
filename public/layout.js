@@ -91,14 +91,27 @@ const sidebarEl1 = `
 const sidebarEl2 = `
     <aside class="barraderecha">
 
-        <fieldset class="asideembed" style="display: flex; justify-content: center; height: 250px">
+        <fieldset class="asideembed" style="display: flex; justify-content: center;">
 
             <legend>
                 PatataChat
                 <img src="img/earth.gif">
             </legend>
 
-            <iframe src="https://www5.cbox.ws/box/?boxid=962863&boxtag=rFbCUC" width="100%" height="auto" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+          <iframe src="https://www5.cbox.ws/box/?boxid=962863&amp;boxtag=rFbCUC" width="100%" height="250px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+
+        </fieldset>
+
+        <fieldset class="asideembed">
+
+          <legend>
+          Actividad
+          </legend>
+
+          <ul class="actividad">
+            <li>Shangri-La Frontier</li>
+            <li>Baldur's Gate 3</li>
+          </ul>
 
         </fieldset>
 
