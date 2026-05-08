@@ -188,11 +188,3 @@ h3 {
 a{
     color: var(--link-color);
 }
-
-#visitorCounterDisplay {
-    /*Main body of visitor counter. Displays visit count.*/
-}
-
-#visitorCounterDisplay::before {
-    /*"You are visitor:" text.*/
-}
