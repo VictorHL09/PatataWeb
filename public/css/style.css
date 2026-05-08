@@ -159,6 +159,12 @@ aside{
     font-size: 12px;
 }
 
+.enlinea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 main{
     padding: 20px 10px;
     grid-area: main;

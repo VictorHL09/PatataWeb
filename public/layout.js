@@ -152,7 +152,7 @@ const sidebarEl2 = `
             <img src="../img/usuarios.gif">
           </legend>
 
-          <a href="http://www.snazzyspace.com/generators/viewer-counter/" title="SnazzySpace.com Viewer Counter" target="_blank"><img src="http://www.snazzyspace.com/generators/viewer-counter/counter.php/fid=1778275838/style=4/counter.png" border="0"></a>
+          <a class="enlinea" href="http://www.snazzyspace.com/generators/viewer-counter/" title="SnazzySpace.com Viewer Counter" target="_blank"><img src="http://www.snazzyspace.com/generators/viewer-counter/counter.php/fid=1778275838/style=4/counter.png" border="0"></a>
 
         </fieldset>
 
