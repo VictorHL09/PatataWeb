@@ -102,6 +102,8 @@ const sidebarEl2 = `
 
         </fieldset>
 
+        <img src="img/palito1divisor.png" style="width: 100%">
+
         <fieldset class="asideembed">
 
           <legend>
@@ -109,8 +111,22 @@ const sidebarEl2 = `
           </legend>
 
           <ul class="actividad">
-            <li>Shangri-La Frontier</li>
-            <li>Baldur's Gate 3</li>
+            
+          <li>
+            <img src="img/tv.gif" style="height: 13px; width: auto">
+            Shangri-La Frontier
+          </li>
+
+          <li>
+            <img src="img/gaming.gif" style="height: 13px; width: auto">
+            Baldur's Gate 3
+          </li>
+
+          <li>
+            <img src="img/libro.gif" style="height: 13px; width: auto">
+            -
+          </li>
+
           </ul>
 
         </fieldset>

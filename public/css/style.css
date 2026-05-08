@@ -26,10 +26,10 @@
 }
 
 html {
-  background-color: var(--bg-main);
-    background-image: url(../img/square.gif);
+    background-color: var(--bg-main);
+/*     background-image: url(../img/square.gif);
     background-repeat: repeat;
-    background-attachment: scroll;
+    background-attachment: scroll; */
 }
 
 body, a{
