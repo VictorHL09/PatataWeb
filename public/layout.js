@@ -39,9 +39,9 @@ const nesting = getNestingString();
 
 const headerEl = `
     <header>
-        <img src="/public/img/patata1.gif">
-        <img src="/public/img/logo.gif" class="logo">
-        <img src="/public/img/patata1.gif">
+        <img src="../img/patata1.gif">
+        <img src="../img/logo.gif" class="logo">
+        <img src="../img/patata1.gif">
     </header>
 `;
 
@@ -61,24 +61,24 @@ const sidebarEl1 = `
             <nav>
                 <ul>
                     <li>
-                        <img src="/public/img/potatochip.gif">
+                        <img src="../img/potatochip.gif">
                         &nbsp
-                        <a href="/public/index.html">Inicio</a>
+                        <a href="../index.html">Inicio</a>
                     </li>
                     <li>
-                        <img src="/public/img/potatochip.gif">
+                        <img src="../img/potatochip.gif">
                         &nbsp
-                        <a href="/public/index.html">Blog</a>
+                        <a href="../index.html">Blog</a>
                     </li>
                     <li>
-                        <img src="/public/img/potatochip.gif">
+                        <img src="../img/potatochip.gif">
                         &nbsp
                         <a href="../html/galeria.html">Galería</a>
                     </li>
                     <li>
-                        <img src="/public/img/potatochip.gif">
+                        <img src="../img/potatochip.gif">
                         &nbsp
-                        <a href="/public/index.html">Libro de visitas</a>
+                        <a href="../index.html">Libro de visitas</a>
                     </li>
                 </ul>
             </nav>
@@ -95,14 +95,14 @@ const sidebarEl2 = `
 
             <legend>
                 PatataChat
-                <img src="/public/img/chat.gif">
+                <img src="../img/chat.gif">
             </legend>
 
           <iframe src="https://www5.cbox.ws/box/?boxid=962863&amp;boxtag=rFbCUC" width="100%" height="250px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
 
         </fieldset>
 
-        <img src="/public/img/palito1divisor.png" style="width: 100%">
+        <img src="../img/palito1divisor.png" style="width: 100%">
 
         <fieldset class="asideembed">
 
@@ -114,17 +114,17 @@ const sidebarEl2 = `
           <ul class="actividad">
             
             <li>
-              <img src="/public/img/tv.gif" style="height: 13px; width: auto">
+              <img src="../img/tv.gif" style="height: 13px; width: auto">
               Shangri-La Frontier
             </li>
 
             <li>
-              <img src="/public/img/gaming.gif" style="height: 13px; width: auto">
+              <img src="../img/gaming.gif" style="height: 13px; width: auto">
               Baldur's Gate 3
             </li>
 
             <li>
-              <img src="/public/img/libro.gif" style="height: 13px; width: auto">
+              <img src="../img/libro.gif" style="height: 13px; width: auto">
               -
             </li>
 
