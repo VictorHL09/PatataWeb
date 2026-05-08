@@ -73,7 +73,7 @@ const sidebarEl1 = `
                     <li>
                         <img src="/public/img/potatochip.gif">
                         &nbsp
-                        <a href="/public/html/galeria.html">Galería</a>
+                        <a href="../html/galeria.html">Galería</a>
                     </li>
                     <li>
                         <img src="/public/img/potatochip.gif">
@@ -108,7 +108,7 @@ const sidebarEl2 = `
 
           <legend>
             Actividad
-            <img src="/public/img/hi.gif">
+            <img src="../img/hi.gif">
           </legend>
 
           <ul class="actividad">
