@@ -94,8 +94,8 @@ const sidebarEl2 = `
         <fieldset class="asideembed" style="display: flex; justify-content: center;">
 
             <legend>
-                PatataChat
-                <img src="../img/chat.gif">
+              PatataChat
+              <img src="../img/chat.gif">
             </legend>
 
           <iframe src="https://www5.cbox.ws/box/?boxid=962863&amp;boxtag=rFbCUC" width="100%" height="250px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
@@ -103,6 +103,17 @@ const sidebarEl2 = `
         </fieldset>
 
         <img src="../img/palito1divisor.png" style="width: 100%">
+
+        <fieldset class="asideembed">
+        
+          <legend>
+            Contador
+            <img src="../img/!.gif">
+          </legend>
+
+        </fieldset>
+
+        <img src="../img/palito2divisor.png" style="width: 100%">
 
         <fieldset class="asideembed">
 
@@ -129,6 +140,19 @@ const sidebarEl2 = `
             </li>
 
           </ul>
+
+        </fieldset>
+
+        <img src="../img/divider1.gif" style="width: 100%">
+
+        <fieldset class="asideembed">
+
+          <legend>
+            Usuarios
+            <img src="../img/usuarios.gif">
+          </legend>
+
+          <a href="http://www.snazzyspace.com/generators/viewer-counter/" title="SnazzySpace.com Viewer Counter" target="_blank"><img src="http://www.snazzyspace.com/generators/viewer-counter/counter.php/fid=1778275838/style=4/counter.png" border="0"></a>
 
         </fieldset>
 
