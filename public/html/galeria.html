@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PatataWeb</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <script src="layout.js"></script> -->
+    <!-- CACHEBUSTING. https://petrapixel.neocities.org/coding/cachebusting -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // Path to your CSS file (like usual), or empty ("") if you don't have one:
+            const CSS_FILE_PATH = "../css/style.css";
+
+            // Path to your JS file (like usual), or empty ("") if you don't have one:
+            const JS_FILE_PATH = "../layout.js";
+
+            function loadScript(src) {
+                const script = document.createElement("script");
+                script.src = src + "?nocache=" + new Date().getTime();
+                script.async = true;
+                document.head.appendChild(script);
+            }
+            function loadCSS(href) {
+                const link = document.createElement("link");
+                link.rel = "stylesheet";
+                link.href = href + "?nocache=" + new Date().getTime();
+                document.head.appendChild(link);
+            }
+            if (JS_FILE_PATH) loadScript(JS_FILE_PATH);
+            if (CSS_FILE_PATH) loadCSS(CSS_FILE_PATH);
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <main>
+
+            <div>
+
+                <h1>Galería</h1>
+                <p>Aquí vas a poder encontrar distintas imágenes que considero interesantes para echar un ojo, así como sus correspondientes artistas. </p>
+
+                <hr>
+
+                <h2>Artistas</h2>
+                <p>Autores de algunas de las imágenes alojadas aquí, amigos y gente con talento que merece aparecer.</p>
+
+                <div class="artist-gallery">
+
+                    <div class="artist-card">
+                        <p>Maza</p>
+                        <img class="artist-avatar" src="/public/img/mazapfp.jpg" alt="Mazael">
+                        <a class="artist-contact" href="https://linktr.ee/C.A.Maza" target="_blank"><img src="/public/img/linktree.png" alt="Linktree"></a>
+                    </div>
+
+                    <div class="artist-card">
+                        <p>ArteroArt</p>
+                        <img class="artist-avatar" src="/public/img/asteroartpfp.jpg" alt="AsteroArt">
+                        <a class="artist-contact" href="https://www.tumblr.com/astero-art" target="_blank"><img src="/public/img/tumblr.png" alt="Tumblr"></a>
+                        <a class="artist-contact" href="https://asteroportfolio.carrd.co/#work" target="_blank"><img src="/public/img/card.png" alt="Carrd"></a>
+                    </div>
+
+                    <div class="artist-card">
+                        <p>Manteca Carne</p>
+                        <img class="artist-avatar" src="/public/img/mantecapfp.jpg" alt="PatataSaurio">
+                        <a class="artist-contact" href="https://www.instagram.com/mantecacarne/" target="_blank"><img src="/public/img/instagram.png" alt="Instagram"></a>
+                    </div> 
+
+                    <div class="artist-card">
+                        <p>Doppelmulti</p>
+                        <img class="artist-avatar" src="/public/img/doppelpfp.jpg" alt="PatataSaurio">
+                        <a class="artist-contact" href="https://x.com/doppelmult39574" target="_blank"><img src="/public/img/twitter.png" alt="Twitter/X"></a>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <h2></h2>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
