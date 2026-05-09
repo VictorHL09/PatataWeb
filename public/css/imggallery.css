@@ -85,3 +85,115 @@
 .art-gallery div:hover img{
     transform: scale(1.35) rotate(10deg);
 }
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.25s ease;
+
+    z-index: 9999;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 75vh;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    font-size: 48px;
+    color: white;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+/* Flechas */
+
+.lightbox-arrow {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: rgba(0,0,0,0.4);
+
+    border: none;
+
+    color: white;
+
+    font-size: 48px;
+
+    padding: 12px 18px;
+
+    cursor: pointer;
+
+    border-radius: 12px;
+
+    transition: background 0.2s ease;
+
+    user-select: none;
+}
+
+.lightbox-arrow:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.lightbox-arrow.left {
+    left: 30px;
+}
+
+.lightbox-arrow.right {
+    right: 30px;
+}
+
+.lightbox-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.lightbox-caption {
+    margin-top: 16px;
+
+    color: white;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    opacity: 0.9;
+}

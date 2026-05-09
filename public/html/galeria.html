@@ -56,7 +56,7 @@
 
                     <div class="artist-card">
                         <p>Maza</p>
-                        <img class="artist-avatar" src="../img/mazapfp.jpg" alt="Mazael">
+                        <img class="artist-avatar" src="../img/mazapfp.jpg" alt="Maza">
                         <a class="artist-contact" href="https://linktr.ee/C.A.Maza" target="_blank"><img
                                 src="../img/linktree.png" alt="Linktree"></a>
                     </div>
@@ -72,15 +72,29 @@
 
                     <div class="artist-card">
                         <p>Manteca Carne</p>
-                        <img class="artist-avatar" src="../img/mantecapfp.jpg" alt="PatataSaurio">
+                        <img class="artist-avatar" src="../img/mantecapfp.jpg" alt="Manteca Carne">
                         <a class="artist-contact" href="https://www.instagram.com/mantecacarne/" target="_blank"><img
                                 src="../img/instagram.png" alt="Instagram"></a>
                     </div>
 
                     <div class="artist-card">
                         <p>Doppelmulti</p>
-                        <img class="artist-avatar" src="../img/doppelpfp.jpg" alt="PatataSaurio">
+                        <img class="artist-avatar" src="../img/doppelpfp.jpg" alt="Doppelmulti">
                         <a class="artist-contact" href="https://x.com/doppelmult39574" target="_blank"><img
+                                src="../img/twitter.png" alt="Twitter/X"></a>
+                    </div>
+
+                    <div class="artist-card">
+                        <p>PoseBean</p>
+                        <img class="artist-avatar" src="../img/posebeanpfp.jpg" alt="PoseBean">
+                        <a class="artist-contact" href="https://x.com/posebean" target="_blank"><img
+                                src="../img/twitter.png" alt="Twitter/X"></a>
+                    </div>
+
+                    <div class="artist-card">
+                        <p>Tonura</p>
+                        <img class="artist-avatar" src="../img/tonurapfp.jpg" alt="Tonura">
+                        <a class="artist-contact" href="https://x.com/tonura_" target="_blank"><img
                                 src="../img/twitter.png" alt="Twitter/X"></a>
                     </div>
 
@@ -177,6 +191,147 @@
         </main>
 
     </div>
+
+    <div class="lightbox" id="lightbox">
+
+        <span class="lightbox-close">&times;</span>
+
+        <button class="lightbox-arrow left" id="prev-btn">
+            &#10094;
+        </button>
+
+        <div class="lightbox-content">
+
+            <img class="lightbox-image" id="lightbox-image" src="" alt="">
+
+            <p class="lightbox-caption" id="lightbox-caption"></p>
+
+        </div>
+
+        <button class="lightbox-arrow right" id="next-btn">
+            &#10095;
+        </button>
+
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const galleryImages = document.querySelectorAll(".art-gallery img");
+
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImage = document.getElementById("lightbox-image");
+            const lightboxCaption = document.getElementById("lightbox-caption");
+
+            const closeButton = document.querySelector(".lightbox-close");
+
+            const prevButton = document.getElementById("prev-btn");
+            const nextButton = document.getElementById("next-btn");
+
+            let currentIndex = 0;
+
+            // Mostrar imagen
+            function showImage(index) {
+
+                const image = galleryImages[index];
+
+                lightboxImage.src = image.src;
+                lightboxImage.alt = image.alt;
+
+                // Buscar el span del artista
+                const artistName =
+                    image.parentElement.querySelector("span")?.textContent || "Desconocido";
+
+                lightboxCaption.textContent = `Dibujado por ${artistName}`;
+
+            }
+
+            // Abrir lightbox
+            galleryImages.forEach((image, index) => {
+
+                image.addEventListener("click", () => {
+
+                    currentIndex = index;
+
+                    showImage(currentIndex);
+
+                    lightbox.classList.add("active");
+
+                });
+
+            });
+
+            // Siguiente imagen
+            function nextImage() {
+
+                currentIndex++;
+
+                if (currentIndex >= galleryImages.length) {
+                    currentIndex = 0;
+                }
+
+                showImage(currentIndex);
+
+            }
+
+            // Imagen anterior
+            function prevImage() {
+
+                currentIndex--;
+
+                if (currentIndex < 0) {
+                    currentIndex = galleryImages.length - 1;
+                }
+
+                showImage(currentIndex);
+
+            }
+
+            nextButton.addEventListener("click", nextImage);
+
+            prevButton.addEventListener("click", prevImage);
+
+            // Cerrar
+            closeButton.addEventListener("click", () => {
+
+                lightbox.classList.remove("active");
+
+            });
+
+            // Click fuera
+            lightbox.addEventListener("click", (event) => {
+
+                if (event.target === lightbox) {
+
+                    lightbox.classList.remove("active");
+
+                }
+
+            });
+
+            // Teclado
+            document.addEventListener("keydown", (event) => {
+
+                if (!lightbox.classList.contains("active")) return;
+
+                if (event.key === "Escape") {
+                    lightbox.classList.remove("active");
+                }
+
+                if (event.key === "ArrowRight") {
+                    nextImage();
+                }
+
+                if (event.key === "ArrowLeft") {
+                    prevImage();
+                }
+
+            });
+
+        });
+
+    </script>
 
 </body>
 
