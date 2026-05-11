@@ -193,3 +193,24 @@ if (!document.body.classList.contains("no-layout")) {
 }
 
 // Continuar código aqui.
+fetch("https://status.cafe/users/patatasaurio/status.json")
+  .then((res) => res.json())
+  .then((data) => {
+    const statusEl = document.getElementById("statuscafe");
+
+    statusEl.innerHTML = `
+      <div id="statuscafe">
+
+        <div id="statuscafe-username"><a>@${data.author}${data.face}</a> ${data.timeAgo}</div>
+        
+        <div id="statuscafe-content">
+          ${data.content}
+        </div>
+
+      </div>
+    `;
+  })
+  .catch(() => {
+    document.getElementById("statuscafe").innerText =
+      "No se pudo cargar el estado.";
+  });
