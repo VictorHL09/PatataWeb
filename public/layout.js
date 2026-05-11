@@ -122,7 +122,17 @@ const sidebarEl2 = `
             <img src="../img/hi.gif">
           </legend>
 
-          <div id="statuscafe"></div>
+          <div id="statuscafe">
+
+            <div id="statuscafe-username">
+              <a href="https://status.cafe/users/patatasaurio">@patatasaurio</a>
+              <img src="../img/clickhere.gif">
+            </div>
+
+            <div id="statuscafe-content">
+              estado de status.cafe próximamente. sigueme
+            </div>
+          </div>
 
           <hr>
 
@@ -177,50 +187,6 @@ if (!document.body.classList.contains("no-layout")) {
   if (wrapperElement) {
     wrapperElement.insertAdjacentHTML("afterbegin", sidebarEl1);
     wrapperElement.insertAdjacentHTML("beforeend", sidebarEl2);
-
-    // STATUS CAFE
-    fetch("https://status.cafe/users/patatasaurio/status.json", {
-      cache: "no-store",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        const statusEl = document.getElementById("statuscafe");
-
-        if (!statusEl) return;
-
-        statusEl.innerHTML = `
-          <div id="statuscafe-username">
-            <a href="https://status.cafe/users/patatasaurio">
-              @${data.author}${data.face || ""}
-            </a>
-
-            ${data.timeago || ""}
-          </div>
-          
-          <div id="statuscafe-content">
-            ${data.content}
-          </div>
-        `;
-      })
-      .catch(() => {
-        const statusEl = document.getElementById("statuscafe");
-
-        if (!statusEl) return;
-
-        statusEl.innerHTML = `
-          <div id="statuscafe-username">
-            <a href="https://status.cafe/users/patatasaurio">
-              @patatasaurio
-            </a>
-            offline
-          </div>
-          
-          <div id="statuscafe-content">
-            estados de status.cafe disponibles próximamente
-          </div>
-        `;
-      });
-
   }
 
   initActiveLinks();
