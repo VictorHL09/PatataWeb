@@ -211,6 +211,15 @@ fetch("https://status.cafe/users/patatasaurio/status.json")
     `;
   })
   .catch(() => {
-    document.getElementById("statuscafe").innerText =
-      "No se pudo cargar el estado.";
+    document.getElementById("statuscafe").innerHTML =`
+      <div id="statuscafe">
+
+        <div id="statuscafe-username"><a href="https://status.cafe/users/patatasaurio">@patatasaurio</a> el 11/05/2026</div>
+        
+        <div id="statuscafe-content">
+          estados de status.cafe disponibles en un futuro, pincha mi nombre de usuario para seguirme
+        </div>
+
+      </div>
+    `;
   });
