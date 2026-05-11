@@ -122,10 +122,7 @@ const sidebarEl2 = `
             <img src="../img/hi.gif">
           </legend>
 
-          <div id="statuscafe">
-            <div id="statuscafe-username"></div>
-            <div id="statuscafe-content"></div>
-          </div>
+          <div id="statuscafe"></div>
 
           <hr>
 
@@ -180,39 +177,53 @@ if (!document.body.classList.contains("no-layout")) {
   if (wrapperElement) {
     wrapperElement.insertAdjacentHTML("afterbegin", sidebarEl1);
     wrapperElement.insertAdjacentHTML("beforeend", sidebarEl2);
+
+    // STATUS CAFE
+    fetch("https://status.cafe/users/patatasaurio/status.json", {
+      cache: "no-store",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        const statusEl = document.getElementById("statuscafe");
+
+        if (!statusEl) return;
+
+        statusEl.innerHTML = `
+          <div id="statuscafe-username">
+            <a href="https://status.cafe/users/patatasaurio">
+              @${data.author}${data.face || ""}
+            </a>
+
+            ${data.timeago || ""}
+          </div>
+          
+          <div id="statuscafe-content">
+            ${data.content}
+          </div>
+        `;
+      })
+      .catch(() => {
+        const statusEl = document.getElementById("statuscafe");
+
+        if (!statusEl) return;
+
+        statusEl.innerHTML = `
+          <div id="statuscafe-username">
+            <a href="https://status.cafe/users/patatasaurio">
+              @patatasaurio
+            </a>
+            offline
+          </div>
+          
+          <div id="statuscafe-content">
+            estados de status.cafe disponibles próximamente
+          </div>
+        `;
+      });
+
   }
 
   initActiveLinks();
 }
 
 // Continuar código aqui.
-fetch("https://status.cafe/users/patatasaurio/status.json")
-  .then((res) => res.json())
-  .then((data) => {
-    const statusEl = document.getElementById("statuscafe");
-
-    statusEl.innerHTML = `
-      <div id="statuscafe">
-
-        <div id="statuscafe-username"><a>@${data.author}${data.face}</a> ${data.timeAgo}</div>
-        
-        <div id="statuscafe-content">
-          ${data.content}
-        </div>
-
-      </div>
-    `;
-  })
-  .catch(() => {
-    document.getElementById("statuscafe").innerHTML =`
-      <div id="statuscafe">
-
-        <div id="statuscafe-username"><a href="https://status.cafe/users/patatasaurio">@patatasaurio</a> el 11/05/2026</div>
-        
-        <div id="statuscafe-content">
-          estados de status.cafe disponibles en un futuro, pincha mi nombre de usuario para seguirme
-        </div>
-
-      </div>
-    `;
-  });
