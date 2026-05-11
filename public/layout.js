@@ -122,6 +122,13 @@ const sidebarEl2 = `
             <img src="../img/hi.gif">
           </legend>
 
+          <div id="statuscafe">
+            <div id="statuscafe-username"></div>
+            <div id="statuscafe-content"></div>
+          </div>
+
+          <hr>
+
           <ul class="actividad">
             
             <li>
@@ -173,6 +180,13 @@ if (!document.body.classList.contains("no-layout")) {
   if (wrapperElement) {
     wrapperElement.insertAdjacentHTML("afterbegin", sidebarEl1);
     wrapperElement.insertAdjacentHTML("beforeend", sidebarEl2);
+
+    const statusScript = document.createElement("script");
+    statusScript.src =
+      "https://status.cafe/current-status.js?name=patatasaurio";
+
+    document.body.appendChild(statusScript);
+
   }
 
   initActiveLinks();

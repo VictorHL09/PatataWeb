@@ -1,0 +1,23 @@
+#statuscafe{
+    margin-top: 2px;
+
+    background-color: var(--bg-box-ultra);
+    padding: 0.5em;
+}
+
+#statuscafe-content{
+    font-size: 12px;
+}
+
+#statuscafe-username{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+#statuscafe-username a{
+    text-decoration: none;
+    font-size: 12px;
+    font-style: italic;
+
+    font-weight: bold;
+}
