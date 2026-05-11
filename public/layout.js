@@ -180,13 +180,6 @@ if (!document.body.classList.contains("no-layout")) {
   if (wrapperElement) {
     wrapperElement.insertAdjacentHTML("afterbegin", sidebarEl1);
     wrapperElement.insertAdjacentHTML("beforeend", sidebarEl2);
-
-    const statusScript = document.createElement("script");
-    statusScript.src =
-      "https://status.cafe/current-status.js?name=patatasaurio";
-
-    document.body.appendChild(statusScript);
-
   }
 
   initActiveLinks();
