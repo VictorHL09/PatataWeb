@@ -91,6 +91,8 @@ const sidebarEl1 = `
 const sidebarEl2 = `
     <aside class="barraderecha">
 
+        <img id="patataheader" src="../img/patataheader.png">
+
         <fieldset class="asideembed" style="display: flex; justify-content: center;">
 
             <legend>

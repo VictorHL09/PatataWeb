@@ -51,12 +51,28 @@ body, a{
     border-radius: 10px;
 
     margin-bottom: 20px;
+
+    box-shadow: 7px 5px 10px 1px rgba(133, 64, 0, 0.452);
 }
 
 header{
     grid-area: header;
     text-align: center;
-    margin-top: 2%;
+
+    padding-top: 10px;
+
+    height: 70px;
+}
+
+#patataheader{
+    position: absolute;
+
+    width: 100px;
+
+    top: 15px;
+    right: 18%;
+
+    z-index: 1;
 }
 
 .logo {
