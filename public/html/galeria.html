@@ -20,10 +20,10 @@
 
             const CSS_FILE_GALLERY ="../css/imggallery.css";
 
-            function loadScript(src) {
+            function loadScript(src, onload) {
                 const script = document.createElement("script");
                 script.src = src + "?nocache=" + new Date().getTime();
-                script.async = true;
+                if (onload) script.onload = onload;
                 document.head.appendChild(script);
             }
             function loadCSS(href) {
