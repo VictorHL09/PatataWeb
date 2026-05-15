@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/potato.ico">
     <title>Galería | PatataWeb</title>
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <!-- <script src="layout.js"></script> -->
@@ -15,7 +16,9 @@
             const CSS_FILE_PATH = "../css/style.css";
 
             // Path to your JS file (like usual), or empty ("") if you don't have one:
-            const JS_FILE_PATH = "../layout.js";
+            const JS_FILE_PATH = "../js/layout.js";
+
+            const CSS_FILE_GALLERY ="../css/imggallery.css";
 
             function loadScript(src) {
                 const script = document.createElement("script");
@@ -27,12 +30,27 @@
                 const link = document.createElement("link");
                 link.rel = "stylesheet";
                 link.href = href + "?nocache=" + new Date().getTime();
+                link.onload = () => document.body.classList.add("cargado");
                 document.head.appendChild(link);
             }
             if (JS_FILE_PATH) loadScript(JS_FILE_PATH);
             if (CSS_FILE_PATH) loadCSS(CSS_FILE_PATH);
+            if (CSS_FILE_GALLERY) loadCSS(CSS_FILE_GALLERY);
         });
     </script>
+
+    <style>
+        body { 
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background-color: rgb(255, 248, 235);
+        }
+
+        body.cargado { 
+            opacity: 1; 
+        }
+    </style>
+
 </head>
 
 <body>

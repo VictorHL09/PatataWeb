@@ -1,0 +1,16 @@
+[
+  {
+    "id": "002-reflexion",
+    "titulo": "Una reflexión",
+    "fecha": "2026-05-15",
+    "resumen": "Algo en lo que estuve pensando esta semana.",
+    "thumbnail": "/img/posts/002-reflexion.jpg"
+  },
+  {
+    "id": "001-primer-acercamiento",
+    "titulo": "Primer acercamiento a este blog",
+    "fecha": "2026-05-15",
+    "resumen": "Bienvenido. Este es mi primer post en esta página web, quizás te interese saber por que cree este lugar.",
+    "thumbnail": "../img/posts/001-primer-acercamiento.jpg"
+  }
+]

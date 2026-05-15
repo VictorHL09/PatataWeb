@@ -1,4 +1,3 @@
-@import url(imggallery.css);
 @import url(statuscafe.css);
 /* COLORES */
 
@@ -179,6 +178,11 @@ main > div{
     padding: 15px;
     border: 2px dashed var(--border-hard);
     border-radius: 10px;
+
+}
+
+main > div:last-child{
+    flex: 1;
 }
 
 footer{

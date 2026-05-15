@@ -68,7 +68,7 @@ const sidebarEl1 = `
                     <li>
                         <img src="../img/potatochip.gif">
                         &nbsp
-                        <a href="../index.html">Blog</a>
+                        <a href="../html/blog.html">Blog</a>
                     </li>
                     <li>
                         <img src="../img/potatochip.gif">
