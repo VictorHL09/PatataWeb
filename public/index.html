@@ -18,21 +18,25 @@
             // Path to your JS file (like usual), or empty ("") if you don't have one:
             const JS_FILE_PATH = "js/layout.js";
 
-            function loadScript(src) {
+            function loadScript(src, onload) {
                 const script = document.createElement("script");
                 script.src = src + "?nocache=" + new Date().getTime();
-                script.async = true;
+                if (onload) script.onload = onload;
                 document.head.appendChild(script);
             }
             function loadCSS(href) {
                 const link = document.createElement("link");
                 link.rel = "stylesheet";
                 link.href = href + "?nocache=" + new Date().getTime();
-                link.onload = () => document.body.classList.add("cargado");
                 document.head.appendChild(link);
             }
-            if (JS_FILE_PATH) loadScript(JS_FILE_PATH);
+
             if (CSS_FILE_PATH) loadCSS(CSS_FILE_PATH);
+
+            loadScript(JS_FILE_PATH, function () {
+                document.body.classList.add("cargado");
+            });
+
         });
     </script>
 

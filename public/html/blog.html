@@ -32,7 +32,6 @@
                 const link = document.createElement("link");
                 link.rel = "stylesheet";
                 link.href = href + "?nocache=" + new Date().getTime();
-                link.onload = () => document.body.classList.add("cargado");
                 document.head.appendChild(link);
             }
             
@@ -41,8 +40,12 @@
             
             // blog-lista.js solo se carga cuando layout.js ha terminado
             loadScript(JS_FILE_PATH, function () {
-                loadScript(JS_BLOGLIST_PATH);
+                loadScript(JS_BLOGLIST_PATH, function () {
+                    document.body.classList.add("cargado");
+                });
             });
+
+            // Cada script nuevo se anida dentro del callback del anterior.
 
         });
     </script>

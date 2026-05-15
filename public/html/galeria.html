@@ -30,12 +30,15 @@
                 const link = document.createElement("link");
                 link.rel = "stylesheet";
                 link.href = href + "?nocache=" + new Date().getTime();
-                link.onload = () => document.body.classList.add("cargado");
                 document.head.appendChild(link);
             }
-            if (JS_FILE_PATH) loadScript(JS_FILE_PATH);
             if (CSS_FILE_PATH) loadCSS(CSS_FILE_PATH);
             if (CSS_FILE_GALLERY) loadCSS(CSS_FILE_GALLERY);
+
+            loadScript(JS_FILE_PATH, function () {
+                document.body.classList.add("cargado");
+            });
+
         });
     </script>
 
