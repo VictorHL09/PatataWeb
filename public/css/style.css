@@ -207,6 +207,15 @@ footer{
     background-color: var(--bg-box);
 }
 
+.imgtext{
+    float: left;
+    shape-margin: 15px;
+}
+
+main p {
+    margin: 15px 0px;
+}
+
 /* ESTILO DE TEXTOS */
 
 *{

@@ -133,3 +133,10 @@ select{
 
     background-color: var(--bg-box-hard);
 }
+
+#controles-blog{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 5px;
+}
