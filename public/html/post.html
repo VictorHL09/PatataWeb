@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/potato.ico">
+    <title>Blog | PatataWeb</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <script src="layout.js"></script> -->
+    <!-- CACHEBUSTING. https://petrapixel.neocities.org/coding/cachebusting -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // Path to your CSS file (like usual), or empty ("") if you don't have one:
+            const CSS_FILE_PATH = "../css/style.css";
+
+            const CSS_FILE_BLOGPOSTS = "../css/posts.css";
+
+            // Path to your JS file (like usual), or empty ("") if you don't have one:
+            const JS_FILE_PATH = "../js/layout.js";
+
+            const JS_BLOGLIST_PATH = "../js/blog-post.js";
+
+            function loadScript(src, onload) {
+                const script = document.createElement("script");
+                script.src = src + "?nocache=" + new Date().getTime();
+                if (onload) script.onload = onload;  // ← aquí se asigna
+                document.head.appendChild(script);
+            }
+            function loadCSS(href) {
+                const link = document.createElement("link");
+                link.rel = "stylesheet";
+                link.href = href + "?nocache=" + new Date().getTime();
+                document.head.appendChild(link);
+            }
+            
+            if (CSS_FILE_PATH) loadCSS(CSS_FILE_PATH);
+            if (CSS_FILE_BLOGPOSTS) loadCSS(CSS_FILE_BLOGPOSTS);
+            
+            // blog-lista.js solo se carga cuando layout.js ha terminado
+            loadScript(JS_FILE_PATH, function () {
+                loadScript(JS_BLOGLIST_PATH, function () {
+                    document.body.classList.add("cargado");
+                });
+            });
+
+            // Cada script nuevo se anida dentro del callback del anterior.
+
+        });
+    </script>
+
+    <style>
+        body { 
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background-color: rgb(255, 248, 235);
+        }
+
+        body.cargado { 
+            opacity: 1; 
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <main>
+
+            <div>
+
+                <div id="post-contenido"></div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

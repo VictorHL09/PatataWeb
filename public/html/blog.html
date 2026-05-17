@@ -73,6 +73,20 @@
 
                 <h1>Blog</h1>
 
+                <div id="controles-blog">
+
+                    <input type="text" id="buscador" placeholder="Buscar..." oninput="aplicarFiltros()">
+                    
+                    <select id="filtro-año" onchange="aplicarFiltros()">
+                        <option value="">Todos los años</option>
+                    </select>
+
+                    <select id="filtro-mes" onchange="aplicarFiltros()">
+                        <option value="">Todos los meses</option>
+                    </select>
+
+                </div>
+
                 <div id="blog-lista"></div>
 
             </div>

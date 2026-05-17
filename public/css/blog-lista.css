@@ -13,6 +13,8 @@ main > div{
 }
 
 .post-tarjeta{
+    position: relative;
+
     margin: 10px 0px;
 
     background-color: var(--bg-box-hard);
@@ -35,7 +37,7 @@ main > div{
     gap: 10px;
 }
 
-.post-tarjeta-enlace img{
+.post-tarjeta-enlace .thumbnail{
     grid-area: img;
 
     width: 100%;
@@ -100,4 +102,34 @@ main > div{
     50%  { transform: rotate(2deg); }
     75%  { transform: rotate(-2deg); }
     100% { transform: rotate(0deg); }
+}
+
+/* BUSCADOR */
+
+#buscador{
+    border: 1px solid var(--border-hard);
+    border-radius: 10px;
+    background-color: var(--bg-box-hard);
+
+    padding-left: 10px;
+
+    color: var(--text-color);
+}
+
+#buscador::placeholder{
+    color: var(--text-muted);
+}
+
+.newpostgif{
+    position: absolute;
+    max-width: 40px;
+
+    top: -15px;
+    right: -10px;
+}
+
+select{
+    border: 1px solid var(--border-hard);
+
+    background-color: var(--bg-box-hard);
 }

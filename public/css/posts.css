@@ -1,0 +1,25 @@
+.thumbnail{
+    width: 100%;
+    border: 2px solid var(--border-hard);
+}
+
+h1{
+    border-bottom: solid;
+}
+
+time{
+    background-color: var(--bg-box-ultra);
+    padding: 2px 5px;
+    border-radius: 5px;
+
+    font-weight: bold;
+    font-style: italic;
+}
+
+.post-text{
+    margin-top: 10px;
+}
+
+.post-text p{
+    margin: 10px 0px;
+}
