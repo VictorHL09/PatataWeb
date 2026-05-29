@@ -5,5 +5,12 @@
     "fecha": "2026-05-18",
     "resumen": "Bienvenido. Este es mi primer post en esta página web, quizás te interese saber por que cree este lugar.",
     "thumbnail": "../img/posts/001-primer-acercamiento.jpg"
+  },
+    {
+    "id": "002-alguien-especial",
+    "titulo": "Alguien especial",
+    "fecha": "2026-05-28",
+    "resumen": "Hoy hablaré de alguien que me influenció bastante en internet.",
+    "thumbnail": "../img/posts/002-alguien-especial.jpg"
   }
 ]

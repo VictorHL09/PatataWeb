@@ -142,7 +142,7 @@ const sidebarEl2 = `
             
             <li>
               <img src="../img/tv.gif" style="height: 13px; width: auto">
-              Shangri-La Frontier
+              Por cuatro perras
             </li>
 
             <li>

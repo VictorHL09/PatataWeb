@@ -6,6 +6,7 @@ let paginaActual = 0;
 async function iniciarBlog() {
     const res = await fetch('../html/posts/index.json');
     posts = await res.json();
+    posts.sort((a, b) => new Date(b.fecha) - new Date(a.fecha)); // ← añadir esto
     postsFiltrados = [...posts];
     rellenarFiltros();
     renderPagina();

@@ -31,6 +31,8 @@ main > div{
     grid-template-areas: 
     "img texto";
 
+    grid-template-columns: 2fr 3fr;
+
     text-decoration: none;
 
     align-items: center;
